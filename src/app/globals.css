@@ -82,4 +82,42 @@
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
+  
+  /* Typography utility classes for our new font system */
+  .font-outfit {
+    font-family: var(--font-outfit);
+  }
+  
+  .font-space-mono {
+    font-family: var(--font-space-mono);
+  }
+  
+  .font-instrument {
+    font-family: var(--font-instrument);
+  }
+  
+  /* Typography spacing utilities */
+  .text-balanced {
+    text-wrap: balance;
+  }
+  
+  .letter-tight {
+    letter-spacing: -0.025em;
+  }
+  
+  .letter-normal {
+    letter-spacing: 0;
+  }
+  
+  .letter-wide {
+    letter-spacing: 0.025em;
+  }
+  
+  .letter-wider {
+    letter-spacing: 0.05em;
+  }
+  
+  .letter-widest {
+    letter-spacing: 0.1em;
+  }
 }
