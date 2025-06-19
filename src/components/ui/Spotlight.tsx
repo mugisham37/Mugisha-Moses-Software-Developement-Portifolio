@@ -4,9 +4,16 @@ import React from "react";
 type SpotlightProps = {
   className?: string;
   fill?: string;
+  fillOpacity?: string;
+  blurAmount?: number;
 };
 
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+export const Spotlight = ({ 
+  className, 
+  fill = "white",
+  fillOpacity = "0.28",
+  blurAmount = 151
+}: SpotlightProps) => {
   return (
     <svg
       className={cn(
@@ -24,8 +31,8 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           rx="1924.71"
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
-          fill={fill || "white"}
-          fillOpacity="0.28"
+          fill={fill}
+          fillOpacity={fillOpacity}
         ></ellipse>
       </g>
       <defs>
@@ -46,7 +53,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
             result="shape"
           ></feBlend>
           <feGaussianBlur
-            stdDeviation="151"
+            stdDeviation={blurAmount.toString()}
             result="effect1_foregroundBlur_1065_8"
           ></feGaussianBlur>
         </filter>

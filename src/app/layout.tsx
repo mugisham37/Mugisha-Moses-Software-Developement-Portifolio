@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Outfit, Space_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { FloatingNav } from "../components/ui/FloatingNav";
+import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 // Outfit - Modern sans-serif (primary font)
 const outfit = Outfit({
@@ -38,6 +40,35 @@ export const metadata: Metadata = {
   },
 };
 
+// Navigation items for the floating nav
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <FaHome className="w-4 h-4" />,
+  },
+  {
+    name: "About",
+    link: "#about",
+    icon: <FaUser className="w-4 h-4" />,
+  },
+  {
+    name: "Skills",
+    link: "#skills",
+    icon: <FaCode className="w-4 h-4" />,
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+    icon: <FaBriefcase className="w-4 h-4" />,
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    icon: <FaEnvelope className="w-4 h-4" />,
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,6 +88,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FloatingNav navItems={navItems} />
           {children}
         </ThemeProvider>
       </body>
