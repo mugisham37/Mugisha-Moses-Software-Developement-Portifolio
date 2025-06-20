@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
+import RecentProjects from "@/components/RecentProjects";
 
 export default function Home() {
   // Smooth scroll to sections when clicking on anchor links
@@ -38,6 +39,9 @@ export default function Home() {
       
       {/* Grid Section - About & Skills */}
       <Grid />
+      
+      {/* Recent Projects Section */}
+      <RecentProjects />
     </main>
   );
 }
