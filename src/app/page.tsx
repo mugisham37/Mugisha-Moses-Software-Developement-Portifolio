@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
+import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import Clients from "@/components/Clients";
@@ -43,7 +44,6 @@ export default function Home() {
       <Grid />
       
       
-      
       {/* Recent Projects Section */}
       <RecentProjects />
       
@@ -52,6 +52,10 @@ export default function Home() {
 
       {/* Work Experience Section */}
       <Experience />
+
+      
+      {/* Approach Section */}
+      <Approach />
     </main>
   );
 }

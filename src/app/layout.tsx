@@ -3,7 +3,7 @@ import { Outfit, Space_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { FloatingNav } from "../components/ui/FloatingNav";
-import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaCode, FaLightbulb, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 // Outfit - Modern sans-serif (primary font)
 const outfit = Outfit({
@@ -56,6 +56,11 @@ const navItems = [
     name: "Skills",
     link: "#skills",
     icon: <FaCode className="w-4 h-4" />,
+  },
+  {
+    name: "Approach",
+    link: "#approach",
+    icon: <FaLightbulb className="w-4 h-4" />,
   },
   {
     name: "Projects",
