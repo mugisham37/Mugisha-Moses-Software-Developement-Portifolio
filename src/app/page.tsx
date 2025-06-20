@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import RecentProjects from "@/components/RecentProjects";
+import Clients from "@/components/Clients";
 
 export default function Home() {
   // Smooth scroll to sections when clicking on anchor links
@@ -42,6 +43,9 @@ export default function Home() {
       
       {/* Recent Projects Section */}
       <RecentProjects />
+      
+      {/* Clients Testimonials Section */}
+      <Clients />
     </main>
   );
 }
