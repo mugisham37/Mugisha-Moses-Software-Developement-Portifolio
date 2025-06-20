@@ -7,6 +7,7 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import Clients from "@/components/Clients";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   // Smooth scroll to sections when clicking on anchor links
@@ -56,6 +57,9 @@ export default function Home() {
       
       {/* Approach Section */}
       <Approach />
+      
+      {/* Footer Section */}
+      <Footer />
     </main>
   );
 }
